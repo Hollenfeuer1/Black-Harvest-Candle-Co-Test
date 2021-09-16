@@ -22,6 +22,10 @@ body {
     color: white;
 }
 
+.logo img {
+    width: 350px;
+}
+
 .nav-link:hover {
     color: #EBA059;
 }
@@ -31,7 +35,22 @@ body {
 }
 
 .contact-us-banner {
+    background-image: url('images/Contact_Us_Banner.jpg');
     text-align: center;
+    max-width: 1466px;
+    max-height: 302px;
+}
+
+.contact-script {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 18rem;
+    color: rgba(235, 160, 89, 0.50);
+}
+
+.contact-text {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 4rem;
+    color: rgba(235, 160, 89, 0.50);
 }
 
 .contact-form label {
