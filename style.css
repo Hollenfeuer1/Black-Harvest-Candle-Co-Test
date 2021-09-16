@@ -1,0 +1,39 @@
+body {
+    background-color: #0B1315;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+}
+
+.fa-bars {
+    color: white;
+}
+
+.navbar-nav {
+    margin-top: 2%;
+    align-items: end;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #EBA059;
+}
+
+.contact-form {
+    max-width: 1366px;
+}
+
+.contact-us-banner {
+    text-align: center;
+}
+
+.contact-form label {
+    color: white;
+}

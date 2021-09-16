@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop | Black Harvest Candle Co.</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/15262fdbee.js" crossorigin="anonymous"></script>
+<link href="style.css" rel="stylesheet">
+<link rel="shortcut icon" href="small-favicon.png" type="image/png" sizes="16x16">
+<link rel="shortcut icon" href="large-favicon.png" type="image/png" sizes="32x32">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="shop.html">Shop</a>
+                <a class="nav-link" href="about-us.html">About</a>
+                <a class="nav-link logo" href="index.html"><img src="images/BHCC_Logo.png" alt="Black Harvest Candle Co." width="282px"></a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact-us.html">Contact Us</a>
+              </div>
+          </div>
+        </div>
+      </nav>
+
+      <ul class="product-grid" id="list">
+
+      </ul>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<body>
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+  
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBXsDSMPeePUL5jOEqlIuXHOzL4qr4nLY8",
+          authDomain: "black-harvest-test.firebaseapp.com",
+          projectId: "black-harvest-test",
+          storageBucket: "black-harvest-test.appspot.com",
+          messagingSenderId: "923344190865",
+          appId: "1:923344190865:web:86382efdbab5b009ad6e30"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+      <!--
+      <script>
+          var itmNo = 0;
+
+          function addItemsToList(title,price,category) {
+            var ul = document.getElementById('list');
+            var header = document.createElement('h2');
+
+            var title = document.createElement('li');
+            var price = document.createElement('li');
+            var category = document.createElement('li');
+
+            header.innerHTML = 'Count: ' + (++itmNO);
+            title.innerHTML = 'Title: ' +title;
+            price.innerHTML = 'Price: ' +title;
+            category.innerHTML = 'Category: ' +title;
+
+            ul.appendChild(header);
+            ul.appendChild(title);
+            ul.appendChild(price);
+            ul.appendChild(category);
+        }
+
+        function FetchAllData() {
+            firebase.database().ref('products-test').once('value',function(snapshot) {
+                snapshot.foreEach(
+                    function(ChildSnapshot){
+                        let title = ChildShapshot.val().title;
+                        let price = ChildShapshot.val().price;
+                        let category = ChildShapshot.val().category;
+                        addItemsToList(title,price,category);
+                    }
+                )
+            });
+        }
+
+        window.onload(FetchAllData());
+      </script> -->
+  </body>
+</body>
+</html>
