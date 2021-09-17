@@ -28,73 +28,23 @@
           </div>
         </div>
       </nav>
+      <nav class="breadcrumb-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Shop</li>
+        </ol>
+      </nav>
 
-      <ul class="product-grid" id="list">
-
-      </ul>
-
+      <div class="product-grid" id="products"></div>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<body>
-    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-  
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyBXsDSMPeePUL5jOEqlIuXHOzL4qr4nLY8",
-          authDomain: "black-harvest-test.firebaseapp.com",
-          projectId: "black-harvest-test",
-          storageBucket: "black-harvest-test.appspot.com",
-          messagingSenderId: "923344190865",
-          appId: "1:923344190865:web:86382efdbab5b009ad6e30"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script>
-      <!--
-      <script>
-          var itmNo = 0;
-
-          function addItemsToList(title,price,category) {
-            var ul = document.getElementById('list');
-            var header = document.createElement('h2');
-
-            var title = document.createElement('li');
-            var price = document.createElement('li');
-            var category = document.createElement('li');
-
-            header.innerHTML = 'Count: ' + (++itmNO);
-            title.innerHTML = 'Title: ' +title;
-            price.innerHTML = 'Price: ' +title;
-            category.innerHTML = 'Category: ' +title;
-
-            ul.appendChild(header);
-            ul.appendChild(title);
-            ul.appendChild(price);
-            ul.appendChild(category);
-        }
-
-        function FetchAllData() {
-            firebase.database().ref('products-test').once('value',function(snapshot) {
-                snapshot.foreEach(
-                    function(ChildSnapshot){
-                        let title = ChildShapshot.val().title;
-                        let price = ChildShapshot.val().price;
-                        let category = ChildShapshot.val().category;
-                        addItemsToList(title,price,category);
-                    }
-                )
-            });
-        }
-
-        window.onload(FetchAllData());
-      </script> -->
-  </body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+<script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="shopClient.js"></script>
 </body>
 </html>
