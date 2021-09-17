@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Roboto&display=swap');
+
 body {
     background-color: #0B1315;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
@@ -20,6 +23,7 @@ body {
 
 .nav-link {
     color: white;
+    font-size: 1.25rem;
 }
 
 .logo img {
@@ -30,8 +34,20 @@ body {
     color: #EBA059;
 }
 
+.breadcrumb-nav {
+    max-width: 1366px;
+    margin: 3rem auto;
+    font-size: 1.125rem;
+}
+
+.breadcrumb-item a {
+    color: white;
+    text-decoration: none;
+}
+
 .contact-form {
     max-width: 1366px;
+    margin: 0 auto;
 }
 
 .contact-us-banner {
@@ -39,6 +55,7 @@ body {
     text-align: center;
     max-width: 1466px;
     max-height: 302px;
+    margin: 0 auto;
 }
 
 .contact-script {
@@ -55,4 +72,37 @@ body {
 
 .contact-form label {
     color: white;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: center;
+    max-width: 1366px;
+    color: white;
+    margin: 0 auto;
+}
+
+.product-grid div {
+    margin-right: 2.25rem;
+}
+
+.product-grid p {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.product-grid #product-title {
+    color: #EBA059;
+    font-size: 1.625rem;
+}
+
+.product-grid input {
+    background-color: #EBA059;
+    margin-bottom: 1rem;
+} 
+
+.product-grid img {
+    max-width: 558px;
 }
