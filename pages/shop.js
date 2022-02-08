@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import ProductList from '../components/ProductList';
+import ShopProductList from '../components/ShopProductList';
 import { getAllProducts } from "../lib/shopify"
 
 const shop = ({ products }) => {
@@ -9,7 +9,7 @@ const shop = ({ products }) => {
             <Head>
             <title>Black Harvest Candle Co. | Shop</title>
             </Head>
-            <ProductList products={products} />
+            <ShopProductList products={products} />
         </div>
     );
 };
