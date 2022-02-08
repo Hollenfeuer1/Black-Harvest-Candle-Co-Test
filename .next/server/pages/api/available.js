@@ -1,0 +1,36 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/api/available";
+exports.ids = ["pages/api/available"];
+exports.modules = {
+
+/***/ "./pages/api/available.js":
+/*!********************************!*\
+  !*** ./pages/api/available.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ send)\n/* harmony export */ });\nasync function send(req, res) {\n  const {\n    query: {\n      id\n    }\n  } = req;\n  const domain = \"kreeture-design.myshopify.com\";\n  const storefrontAccessToken = \"0c623b3a99a8443f162f64ad806e816b\";\n\n  async function ShopifyData(query) {\n    const URL = `https://${domain}/api/2021-07/graphql.json`;\n    const options = {\n      endpoint: URL,\n      method: \"POST\",\n      headers: {\n        \"X-Shopify-Storefront-Access-Token\": storefrontAccessToken,\n        \"Accept\": \"application/json\",\n        \"Content-Type\": \"application/json\"\n      },\n      body: JSON.stringify({\n        query\n      })\n    };\n\n    try {\n      const data = await fetch(URL, options).then(response => {\n        return response.json();\n      });\n      return data;\n    } catch (error) {\n      throw new Error(\"Products not fetched\");\n    }\n  }\n\n  async function getProduct(handle) {\n    const query = `\n    {\n      productByHandle(handle: \"${handle}\") {\n        id\n        variants(first: 25) {\n          edges {\n            node {\n              id\n              availableForSale\n            }\n          }\n        }\n      }\n    }`;\n    const response = await ShopifyData(query);\n    const product = response.data.productByHandle ? response.data.productByHandle : [];\n    return product;\n  }\n\n  const product = await getProduct(id);\n  res.json(product);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9hcGkvYXZhaWxhYmxlLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBZSxlQUFlQSxJQUFmLENBQW9CQyxHQUFwQixFQUF5QkMsR0FBekIsRUFBOEI7QUFDM0MsUUFBTTtBQUNKQyxJQUFBQSxLQUFLLEVBQUU7QUFBRUMsTUFBQUE7QUFBRjtBQURILE1BRUZILEdBRko7QUFJQSxRQUFNSSxNQUFNLEdBQUdDLCtCQUFmO0FBQ0EsUUFBTUcscUJBQXFCLEdBQUdILGtDQUE5Qjs7QUFFQSxpQkFBZUssV0FBZixDQUEyQlIsS0FBM0IsRUFBa0M7QUFDaEMsVUFBTVMsR0FBRyxHQUFJLFdBQVVQLE1BQU8sMkJBQTlCO0FBRUEsVUFBTVEsT0FBTyxHQUFHO0FBQ2RDLE1BQUFBLFFBQVEsRUFBRUYsR0FESTtBQUVkRyxNQUFBQSxNQUFNLEVBQUUsTUFGTTtBQUdkQyxNQUFBQSxPQUFPLEVBQUU7QUFDUCw2Q0FBcUNQLHFCQUQ5QjtBQUVQLGtCQUFVLGtCQUZIO0FBR1Asd0JBQWdCO0FBSFQsT0FISztBQVFkUSxNQUFBQSxJQUFJLEVBQUVDLElBQUksQ0FBQ0MsU0FBTCxDQUFlO0FBQUVoQixRQUFBQTtBQUFGLE9BQWY7QUFSUSxLQUFoQjs7QUFXQSxRQUFJO0FBQ0YsWUFBTWlCLElBQUksR0FBRyxNQUFNQyxLQUFLLENBQUNULEdBQUQsRUFBTUMsT0FBTixDQUFMLENBQW9CUyxJQUFwQixDQUF5QkMsUUFBUSxJQUFJO0FBQ3RELGVBQU9BLFFBQVEsQ0FBQ0MsSUFBVCxFQUFQO0FBQ0QsT0FGa0IsQ0FBbkI7QUFJQSxhQUFPSixJQUFQO0FBQ0QsS0FORCxDQU1FLE9BQU9LLEtBQVAsRUFBYztBQUNkLFlBQU0sSUFBSUMsS0FBSixDQUFVLHNCQUFWLENBQU47QUFDRDtBQUNGOztBQUVELGlCQUFlQyxVQUFmLENBQTBCQyxNQUExQixFQUFrQztBQUNoQyxVQUFNekIsS0FBSyxHQUFJO0FBQ25CO0FBQ0EsaUNBQWlDeUIsTUFBTztBQUN4QztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE1BYkk7QUFlQSxVQUFNTCxRQUFRLEdBQUcsTUFBTVosV0FBVyxDQUFDUixLQUFELENBQWxDO0FBRUEsVUFBTTBCLE9BQU8sR0FBR04sUUFBUSxDQUFDSCxJQUFULENBQWNVLGVBQWQsR0FBZ0NQLFFBQVEsQ0FBQ0gsSUFBVCxDQUFjVSxlQUE5QyxHQUFnRSxFQUFoRjtBQUVBLFdBQU9ELE9BQVA7QUFDRDs7QUFFRCxRQUFNQSxPQUFPLEdBQUcsTUFBTUYsVUFBVSxDQUFDdkIsRUFBRCxDQUFoQztBQUVBRixFQUFBQSxHQUFHLENBQUNzQixJQUFKLENBQVNLLE9BQVQ7QUFDRCIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2VzL2FwaS9hdmFpbGFibGUuanM/MzU0MiJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBzZW5kKHJlcSwgcmVzKSB7XG4gIGNvbnN0IHtcbiAgICBxdWVyeTogeyBpZCB9LFxuICB9ID0gcmVxXG5cbiAgY29uc3QgZG9tYWluID0gcHJvY2Vzcy5lbnYuU0hPUElGWV9TVE9SRV9ET01BSU5cbiAgY29uc3Qgc3RvcmVmcm9udEFjY2Vzc1Rva2VuID0gcHJvY2Vzcy5lbnYuU0hPUElGWV9TVE9SRUZST05UX0FDQ0VTU1RPS0VOXG5cbiAgYXN5bmMgZnVuY3Rpb24gU2hvcGlmeURhdGEocXVlcnkpIHtcbiAgICBjb25zdCBVUkwgPSBgaHR0cHM6Ly8ke2RvbWFpbn0vYXBpLzIwMjEtMDcvZ3JhcGhxbC5qc29uYFxuXG4gICAgY29uc3Qgb3B0aW9ucyA9IHtcbiAgICAgIGVuZHBvaW50OiBVUkwsXG4gICAgICBtZXRob2Q6IFwiUE9TVFwiLFxuICAgICAgaGVhZGVyczoge1xuICAgICAgICBcIlgtU2hvcGlmeS1TdG9yZWZyb250LUFjY2Vzcy1Ub2tlblwiOiBzdG9yZWZyb250QWNjZXNzVG9rZW4sXG4gICAgICAgIFwiQWNjZXB0XCI6IFwiYXBwbGljYXRpb24vanNvblwiLFxuICAgICAgICBcIkNvbnRlbnQtVHlwZVwiOiBcImFwcGxpY2F0aW9uL2pzb25cIixcbiAgICAgIH0sXG4gICAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7IHF1ZXJ5IH0pXG4gICAgfVxuXG4gICAgdHJ5IHtcbiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBmZXRjaChVUkwsIG9wdGlvbnMpLnRoZW4ocmVzcG9uc2UgPT4ge1xuICAgICAgICByZXR1cm4gcmVzcG9uc2UuanNvbigpXG4gICAgICB9KVxuXG4gICAgICByZXR1cm4gZGF0YVxuICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICB0aHJvdyBuZXcgRXJyb3IoXCJQcm9kdWN0cyBub3QgZmV0Y2hlZFwiKVxuICAgIH1cbiAgfVxuXG4gIGFzeW5jIGZ1bmN0aW9uIGdldFByb2R1Y3QoaGFuZGxlKSB7XG4gICAgY29uc3QgcXVlcnkgPSBgXG4gICAge1xuICAgICAgcHJvZHVjdEJ5SGFuZGxlKGhhbmRsZTogXCIke2hhbmRsZX1cIikge1xuICAgICAgICBpZFxuICAgICAgICB2YXJpYW50cyhmaXJzdDogMjUpIHtcbiAgICAgICAgICBlZGdlcyB7XG4gICAgICAgICAgICBub2RlIHtcbiAgICAgICAgICAgICAgaWRcbiAgICAgICAgICAgICAgYXZhaWxhYmxlRm9yU2FsZVxuICAgICAgICAgICAgfVxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1gXG5cbiAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IFNob3BpZnlEYXRhKHF1ZXJ5KVxuXG4gICAgY29uc3QgcHJvZHVjdCA9IHJlc3BvbnNlLmRhdGEucHJvZHVjdEJ5SGFuZGxlID8gcmVzcG9uc2UuZGF0YS5wcm9kdWN0QnlIYW5kbGUgOiBbXVxuXG4gICAgcmV0dXJuIHByb2R1Y3RcbiAgfVxuXG4gIGNvbnN0IHByb2R1Y3QgPSBhd2FpdCBnZXRQcm9kdWN0KGlkKVxuXG4gIHJlcy5qc29uKHByb2R1Y3QpXG59Il0sIm5hbWVzIjpbInNlbmQiLCJyZXEiLCJyZXMiLCJxdWVyeSIsImlkIiwiZG9tYWluIiwicHJvY2VzcyIsImVudiIsIlNIT1BJRllfU1RPUkVfRE9NQUlOIiwic3RvcmVmcm9udEFjY2Vzc1Rva2VuIiwiU0hPUElGWV9TVE9SRUZST05UX0FDQ0VTU1RPS0VOIiwiU2hvcGlmeURhdGEiLCJVUkwiLCJvcHRpb25zIiwiZW5kcG9pbnQiLCJtZXRob2QiLCJoZWFkZXJzIiwiYm9keSIsIkpTT04iLCJzdHJpbmdpZnkiLCJkYXRhIiwiZmV0Y2giLCJ0aGVuIiwicmVzcG9uc2UiLCJqc29uIiwiZXJyb3IiLCJFcnJvciIsImdldFByb2R1Y3QiLCJoYW5kbGUiLCJwcm9kdWN0IiwicHJvZHVjdEJ5SGFuZGxlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/api/available.js\n");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__("./pages/api/available.js"));
+module.exports = __webpack_exports__;
+
+})();
