@@ -14,7 +14,6 @@ export default function Footer() {
           <Link href='/'>TikTok</Link>
           </div>
         </nav>
-        <p className="mt-8 text-center text-gray-400">&copy; 2021 Learn Shopify Next.js Course, All right reserved.</p>
       </div>
     </footer>
   )
