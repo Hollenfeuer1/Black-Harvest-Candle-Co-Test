@@ -13,8 +13,7 @@ const ProductCard = ({ product }) => {
     <Link
       href={`/products/${handle}`}
     >
-      <a className="group">
-      <img src='/p_border_top.png' className='mb-2'/>
+      <a className="group shadow-lg rounded-md">
         <div className="w-full bg-black rounded-3xl overflow-hidden">
           <div className="relative group-hover:opacity-75 h-72">
             <Image 
@@ -25,9 +24,7 @@ const ProductCard = ({ product }) => {
             />
           </div>
         </div>
-        <img src='/p_border_top.png' className='my-2'/>
         <h3 className="text-xl text-center font-bold">{title}</h3>
-        <img src='/p_border_bottom.png' className='my-2'/>
         <p className="mt-1 text-lg">{formatter.format(price)}</p>
       </a>
     </Link>
