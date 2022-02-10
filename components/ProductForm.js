@@ -96,7 +96,7 @@ export default function ProductForm({ product }) {
             onClick={() => {
               addToCart(selectedVariant)
             }}
-            className="rounded-lg text-white px-2 py-3 mt-3">Add To Cart
+            className="text-white bg-gradient-to-br from-[#BE8536] to-[#8E3E35] hover:bg-gradient-to-bl focus:ring-4 focus:ring-[#75332B] dark:focus:ring-[#75332B] font-medium rounded-lg text-sm px-2 py-3 text-center mr-2 my-3">Add To Cart
           </button> :
           <button
             className="rounded-lg text-white px-2 py-3 mt-3 bg-gray-800 cursor-not-allowed">
