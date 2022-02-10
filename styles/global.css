@@ -23,11 +23,3 @@ h3 {
     font-family: 'Cormorant Garamond', serif;
     color: #7BABB5;
 }
-
-button {
-    background-color: #BE8536;
-}
-
-button:hover {
-    background-color: #8E3E35;
-}

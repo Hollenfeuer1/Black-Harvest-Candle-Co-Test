@@ -10,7 +10,7 @@ const ProductList = ({ products }) => {
           Shop Our Favorites
         </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button className="rounded-lg text-white w-32 px-2 py-3 mt-3 mb-6">Shop</button>
+        <button className="rounded-lg text-white w-32 px-2 py-3 mt-3 mb-6 bg-gradient-to-br from-[#BE8536] to-[#8E3E35] hover:bg-gradient-to-bl focus:ring-4 focus:ring-[#75332B] dark:focus:ring-[#75332B]">Shop</button>
         </div>
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {

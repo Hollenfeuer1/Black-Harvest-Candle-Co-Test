@@ -43,7 +43,7 @@ const Navbar = () => {
                                         <Link href='/shop' passHref>Shop</Link>
                                         <Link href='/about-us' passHref>About Us</Link>
                                         <Link href='/faq' passHref>FAQ</Link>
-                                        <Link href='/contact' passHref>Contact Us</Link>
+                                        <Link href='/contact-us' passHref>Contact Us</Link>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
                             <Disclosure.Button as='a' href='/shop' className='block px-3 py-2 rounded-md text-base font-medium'>Shop</Disclosure.Button>
                             <Disclosure.Button as='a' href='/about-us' className='block px-3 py-2 rounded-md text-base font-medium'>About Us</Disclosure.Button>
                             <Disclosure.Button as='a' href='/faq' className='block px-3 py-2 rounded-md text-base font-medium'>FAQ</Disclosure.Button>
-                            <Disclosure.Button as='a' href='/contact' className='block px-3 py-2 rounded-md text-base font-medium'>Contact Us</Disclosure.Button>
+                            <Disclosure.Button as='a' href='/contact-us' className='block px-3 py-2 rounded-md text-base font-medium'>Contact Us</Disclosure.Button>
                         </div>
                     </Disclosure.Panel>
                 </>

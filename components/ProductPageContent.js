@@ -36,7 +36,10 @@ export default function ProductPageContent({ product }) {
         </div>
         <ProductForm product={product} />
       </div>
-      <p className="pt-16 space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl w-11/12 mx-auto">{product.description}</p>
+      <div className='pt-16 space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl w-11/12 mx-auto'>
+      <h2 className='text-2xl'>Description</h2>
+      <p className="first-letter:float-left first-letter:text-5xl first-letter:pr-2 first-letter:font-serif">{product.description}</p>
+      </div>
       <RecommendedList current={product.id} products={product.collections.edges[0].node.products.edges} />
     </div>
   )

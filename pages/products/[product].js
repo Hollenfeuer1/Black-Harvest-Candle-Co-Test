@@ -1,5 +1,6 @@
-import ProductPageContent from "../../components/ProductPageContent"
-import { getAllProducts, getProduct, recursiveCatalog } from "../../lib/shopify"
+import ProductPageContent from "../../components/ProductPageContent";
+import { getAllProducts, getProduct, recursiveCatalog } from "../../lib/shopify";
+import Head from 'next/head';
 
 export default function ProductPage({ product }) {
 
@@ -9,9 +10,14 @@ export default function ProductPage({ product }) {
   
 
   return (
+    <>
+    <Head>
+    <title>Black Harvest Candle Co. | {product.title}</title>
+    </Head>
     <div className="min-h-screen py-12 sm:pt-20">
       <ProductPageContent product={product} />
     </div>
+    </>
   )
 }
 
