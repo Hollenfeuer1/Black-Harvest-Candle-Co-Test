@@ -24,7 +24,7 @@ const Navbar = () => {
                         <div className='relative flex items-center justify-between h-16'>
                             <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
                                 {/* Mobile Menu Button */}
-                                <Disclosure.Button className='inline-flex items-center justify-content p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+                                <Disclosure.Button className='inline-flex items-center justify-content p-2 rounded-md text-gray-400 bg-transparent hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                                     <span className='sr-only'>Open main menu</span>
                                     {open ? (
                                         <XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -35,8 +35,8 @@ const Navbar = () => {
                             </div>
                             <div className='flex-1 flex justify-center sm:items-stretch sm:justify-evenly'>
                                 <div className='flex-shrink-0 flex items-center'>
-                                    <img className='block lg:hidden h-8 w-auto' src='/BHCC_Logo_Icon.png' alt='Black Harvest Candle Co' />
-                                    <Link href='/'><img className='hidden lg:block h-20 w-auto mt-14 cursor-pointer' src='/BHCC_Logo_New.png' alt='Black Harvest Candle Co' /></Link>
+                                    <Link href='/' passHref><img className='block lg:hidden h-8 w-auto' src='/BHCC_Logo_Icon.png' alt='Black Harvest Candle Co' /></Link>
+                                    <Link href='/' passHref><img className='hidden lg:block h-20 w-auto mt-14 cursor-pointer' src='/BHCC_Logo_New.png' alt='Black Harvest Candle Co' /></Link>
                                 </div>
                                 <div className='hidden sm:block sm:ml-6 mt-20 pl-20 pt-1'>
                                     <div className='flex space-x-4'>

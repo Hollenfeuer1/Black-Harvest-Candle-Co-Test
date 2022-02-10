@@ -24,8 +24,8 @@ const ProductCard = ({ product }) => {
             />
           </div>
         </div>
-        <h3 className="text-xl text-center font-bold">{title}</h3>
-        <p className="mt-1 text-lg">{formatter.format(price)}</p>
+        <h3 className="text-2xl text-center font-bold">{title}</h3>
+        <p className="mt-1 text-lg text-white text-center mb-2">{formatter.format(price)}</p>
       </a>
     </Link>
   )
