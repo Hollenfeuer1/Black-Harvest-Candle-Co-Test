@@ -1,4 +1,4 @@
-import { getProductsInCollection } from "../lib/shopify"
+import { getProductsInCollectionFeatured } from "../lib/shopify"
 import ProductList from "../components/ProductList"
 import Hero from "../components/Hero"
 import Head from 'next/head'
@@ -25,7 +25,7 @@ export default function Home({ products }) {
 }
 
 export async function getStaticProps() {
-  const products = await getProductsInCollection()
+  const products = await getProductsInCollectionFeatured()
 
   return {
     props: { products }, // will be passed to the page component as props

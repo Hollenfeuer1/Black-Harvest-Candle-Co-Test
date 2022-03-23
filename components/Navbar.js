@@ -17,7 +17,7 @@ const Navbar = () => {
         return (cartQuantity += item?.variantQuantity)
     })
     return (
-        <Disclosure as='nav' className=''>
+        <Disclosure as='nav' className='shadow-lg bg-[#161E20]'>
             {({ open }) => (
                 <>
                     <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
@@ -38,7 +38,7 @@ const Navbar = () => {
                                     <Link href='/' passHref><img className='block lg:hidden h-8 w-auto' src='/BHCC_Logo_Icon.png' alt='Black Harvest Candle Co' /></Link>
                                     <Link href='/' passHref><img className='hidden lg:block h-20 w-auto mt-14 cursor-pointer' src='/BHCC_Logo_New.png' alt='Black Harvest Candle Co' /></Link>
                                 </div>
-                                <div className='hidden sm:block sm:ml-6 mt-20 pl-20 pt-1'>
+                                <div className='hidden sm:block sm:ml-6 lg:mt-14 pl-20 pt-1'>
                                     <div className='flex space-x-4'>
                                         <Link href='/shop' passHref>Shop</Link>
                                         <Link href='/about-us' passHref>About Us</Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static lg:mt-10 sm:inset-auto sm:ml-6 sm:pr-0'>
+                            <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static lg:mt-4 sm:inset-auto sm:ml-6 sm:pr-0'>
                                 <a
                                     className="flex text-md font-bold cursor-pointer"
                                     onClick={() => setCartOpen(!cartOpen)}
